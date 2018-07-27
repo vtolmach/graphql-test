@@ -10,7 +10,7 @@ var schema = buildSchema(`
     type Query {
         course(id:  Int!): Course
         courses(topic: String): [Course]
-        games(search: String, limit: Int!): [Game]
+        getGames(search: String, limit: Int!): [Game]
     },
     type Mutation {
         updateCourseTopic(id: Int!, topic: String!): Course
@@ -94,7 +94,7 @@ var getGames = function ({search, limit}, context, info) {
 var root = {
     course: getCourse,
     courses: getCourses,
-    games: getGames,
+    getGames: getGames,
     updateCourseTopic: updateCourseTopic
 };
 

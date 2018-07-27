@@ -9,7 +9,7 @@ IGDB_API_KEY='my api key' node index.js
 
 ```graphql
 query getGames($Search: String, $Limit: Int!) {
-  games(search: $Search, limit: $Limit) {
+  getGames(search: $Search, limit: $Limit) {
     Name
     slug
     summery
